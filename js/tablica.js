@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $('#example').DataTable({
-    'ajax': 'dane/dane.txt',
+    'ajax': 'dane/dane.json',
     'columns': [
       { 'data': 'Imie' },
       { 'data': 'Nazwisko' },
