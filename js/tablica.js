@@ -32,9 +32,8 @@ function updateDataTableSelectAllCtrl(table) {
 
 $(document).ready(function() {
    // Initialize the table
-   var table = $('#example').DataTable({ //example jest to ID tablicy w html
-     //ajax: '/lab/articles/jquery-datatables-checkboxes/ids-arrays.txt',
-	 ajax: 'dane.json',
+   var table = $('#example').DataTable({
+      ajax: './dane.txt',
       columnDefs: [
          {
             targets: 0,
