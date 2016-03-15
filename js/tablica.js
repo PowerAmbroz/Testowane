@@ -33,7 +33,7 @@ function updateDataTableSelectAllCtrl(table) {
 $(document).ready(function() {
    // Initialize the table
    var table = $('#example').DataTable({
-      ajax: './dane.txt',
+      ajax: 'dane/dane.txt',
       columnDefs: [
          {
             targets: 0,
