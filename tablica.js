@@ -1,4 +1,4 @@
-// 
+//
 // Updates "Select all" control in a data table
 //
 function updateDataTableSelectAllCtrl(table) {
@@ -61,17 +61,17 @@ $(document).ready(function() {
       }
 
       // Update state of "Select all" control
-      updateDataTableSelectAllCtrl(table);      
+      updateDataTableSelectAllCtrl(table);
    });
 
    // Handle click on "Select all" control
    $('#example thead').on('click', 'input[type="checkbox"]', function(e) {
       if (this.checked) {
-         table.rows({ page: 'current' }).select();        
+         table.rows({ page: 'current' }).select();
       } else {
          table.rows({ page: 'current' }).deselect();
       }
-      
+
       e.stopPropagation();
    });
 
@@ -85,17 +85,17 @@ $(document).ready(function() {
       // Update state of "Select all" control
       updateDataTableSelectAllCtrl(table);
    });
-   
-   // Handle form submission event 
+
+   // Handle form submission event
    $('#frm-example').on('submit', function(e){
       var form = this;
-      
+
       // Iterate over all selected checkboxes
       table.rows({ selected: true }).every(function(index){
          // Get row ID
          var rowId = this.data()[0];
-         
-         // Create a hidden element 
+
+         // Create a hidden element
          $(form).append(
              $('<input>')
                 .attr('type', 'hidden')
@@ -103,5 +103,5 @@ $(document).ready(function() {
                 .val(rowId)
          );
       });
-   });   
+   });
 });
