@@ -1,5 +1,5 @@
 <?php
-  // include_once('php/initDB.php');
+  include_once('php/initDB.php');
   include_once('view/header.php');
 ?>
 
