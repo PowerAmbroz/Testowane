@@ -3,7 +3,7 @@
   include_once('view/header.php');
 ?>
 
-
+  <h1>Hello!</h1>
 
 
     <table id="example" class="display select" width="100%" cellspacing="0">
