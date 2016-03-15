@@ -1,4 +1,5 @@
-[
+{
+  "data" : [
     {
         "Imie": "Jan",
         "Nazwisko": "Kowalski",
@@ -17,4 +18,5 @@
         "Grupa": "245NC",
         "Telefon": "98765432"
     }
-]
+  ]
+}
