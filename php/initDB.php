@@ -15,7 +15,7 @@
   //echo json_encode($emparray);
 
   //write to json file
-  $fp = fopen('dane.json', 'w');
+  $fp = fopen('dane/dane.json', 'w');
   fwrite($fp, json_encode($emparray));
   fclose($fp);
 
