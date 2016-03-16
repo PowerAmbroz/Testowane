@@ -19,6 +19,35 @@
   fwrite($fp, json_encode($emparray));
   fclose($fp);
 
+
+//dopisywanie danych na poczatku
+$fotwarcie= fopen('dane/dane.json','r');
+
+//odczyt danych
+$staredane = fread ($fotwarcie, filesize('dane/dane.json'));
+
+//zamknięcie pliku
+fclose($fotwarcie);
+
+//stworzenie nowych danych
+$nowedane='{"data" : ';
+$nowedane .=$staredane;
+
+//zapis do nowego pliku
+//otwarcie pliku do zapisu
+
+$fzapis=fopen('dane/dane.json','w');
+
+//zapis
+fputs($fzapis,$nowedane);
+
+fclose($fzapis);
+
+$plik=fopen('dane/dane.json','a');
+$zawartosc='}';
+fwrite($plik,$zawartosc);
+fclose($plik);
+
   //close the db connection
   mysqli_close($connection);
 ?>
